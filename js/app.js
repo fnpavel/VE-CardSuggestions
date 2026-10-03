@@ -38,7 +38,7 @@
   const tile = (c) => `<a class="tile" data-faction="${c.faction}" href="#${c.id}"><div class="tile-top"><div><h3>${esc(c.name)}</h3>${altName(c)}${typeRarity(c)}</div>${coin(c)}</div>${statRow(c.stats)}${chips(c)}</a>`;
 
   function home() {
-    return `<section class="hero"><h1>${SITE}</h1><p>New unit and building proposals, organized by faction. ${plural(CARDS.length)} across ${FACTIONS.length} factions. Select a card to read the details.</p></section>
+    return `<section class="hero"><h1>${SITE}</h1><p>New units, organized by faction. ${plural(CARDS.length)} across ${FACTIONS.length} factions.<br>Select a card to read the details.</p></section>
       <div class="fcols">${FACTIONS.map((f) => `<section class="fcol" data-faction="${f.id}"><div class="fhead">${sym(f.id)}<h2>${esc(f.name)}</h2></div>${factionCards(f).map(tile).join('')}</section>`).join('')}</div>`;
   }
 

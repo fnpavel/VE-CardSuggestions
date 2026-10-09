@@ -38,10 +38,11 @@ const CARDS = [
     sectionTitles: { why: "Why This Card and the Next Card" },
     sections: {
       why: L(
-        "Both this card and the other suggestion would give more reasons to buy something like an Eagle Unit, which is currently lackluster. Green is the faction I play the most, and I seldom pick Eagle Unit; when I do, I tend to regret it. There is little reason to go hard on the Annex/On_Capture plan: it is better to use movement from Scouts, and the durdling of a Laceweed — if there is room, and whichever useful units available from the secondary faction, and then crown the end game with Atom Splitter so all the capture-synergies are less about a real gameplan and more about being there at the right time.",
-        "Theory Crafter is rare and Grad Elf is uncommon so not that frequent picks, thus those synergies are, in my opinion, underexplored. I understand they may be too good because the game is about capturing zones, but having the Wolf and Guild would help make the whole plan more cohesive."
+        "Both this card and the other suggestion would give more reasons to buy something like an Eagle Unit, which is currently lackluster. Green is the faction I play the most, and I seldom pick Eagle Unit but when I do, I tend to regret. There is little reason to go hard on the Annex/OnCapture plan as it is better to use movement from Scouts, and the durdling of a Laceweed (if there is room), and whichever useful units available from the secondary faction, and then crown the end game with Atom Splitter so all the capture-synergies are less about a real gameplan and more about appearing in the barracks early enough (Crafter is probably a must pick always though, so it is yet again not really about strategy and more about sheer strength of the unit).",
+        "Theory Crafter is rare and Grad Elf is uncommon so not that frequent picks, thus those synergies are, in my opinion, underexplored. I understand they may be too good because the game is about capturing zones, but having the Wolf and the Explorer's Guild would help make the whole plan more cohesive."
       ),
-      concerns: ["I don’t have the data, but my experience with things like Grad Elf is that the card triggers maybe twice a game on average and I would probably bet below that number. I think the Wolf would end up triggering on average around that time in good situations, which would approach the buff of a Berserker Bear that survives the skirmish as the Wolf is an OR buff."]
+      concerns: ["I don’t have the data, but my experience with things like Grad Elf is that the card triggers maybe twice a game on average and I would probably bet below that number (~1.6 times).",
+        "I think the Wolf would end up triggering on average close to Grad Elf, maybe we can expect twice per skirmish if the game is going well for the player, which would approach the buff of a Berserker Bear that survives the skirmish (Wolf is an OR buff)."]
     }
   },
   {
@@ -49,16 +50,16 @@ const CARDS = [
     faction: "scintillant-assembly", type: ["building"], cost: 4, rarity: "uncommon",
     stats: { attack: 0, health: 13, armor: null, movement: null, range: null },
     traits: ["immobile"], mechanics: [],
-    abilities: [{ trigger: "on-capture", name: null, text: "generates a number of Explorer Members equal to half the captured zone VP" }],
+    abilities: [{ trigger: "on-capture", name: null, text: "generates a number of Explorer Members (minimum 1) equal to half the captured zone VP rounded down" }],
     secondaryUnits: [{
       id: "explorer-member", name: "Explorer Member", type: ["elf"],
-      stats: { attack: 1, health: 9, armor: null, movement: 2, range: null, annex: 30 },
+      stats: { attack: 2, health: 9, armor: null, movement: 2, range: null, annex: 30 },
       traits: [], mechanics: [], abilities: []
     }],
     sections: {
       concerns: [
         "This may be too good for the gold cost, but I don’t think that will be the case because it is spawning units On Capture and the Guild is an immobile unit, which already clashes with the Faction theme, so it will most likely spawn once per skirmish bar some strange interaction (like opposing Agent of Siren pulling the card).",
-        "Moreover, the Zones with highest VP will spawn the most units and those are the Zones that have the biggest mass of units which means the capture ends up happening in later Beats, when there are less things left for capture."
+        "Moreover, the Zones with highest VP will spawn the most units and those are the Zones that have the biggest mass of units which means the capture ends up happening in later Beats when there are less things left for capture thus Explorer Members will have less impact."
       ]
     }
   },
@@ -75,8 +76,12 @@ const CARDS = [
     sections: {
       concept: L(
         "The name could be anything that is clearly filled with water: Mechanical Grigg, Tank on Wheels, Hydraulic Shark, etc.",
-        "Going with a Grigg makes it so this is the Dwarf (mechanical) answer to the Scintillant Assembly’s sea-creature experiments."
-      )
+        "Going with a Grigg makes it so this is the Dwarf (mechanical) answer to the Scintillant Assembly’s sea-creature experiments.",
+      ),
+      balance:[
+        "I think this unit has a lot of potential and will require some tuning.",
+        "Maybe the 40% chance is too high, or just remove the malfunctioning altogether... I don't know yet."
+      ]
     }
   },
   {
@@ -132,9 +137,10 @@ const CARDS = [
     sections: {
       concept: L(
         "The inspiration for this card was Diablo II’s Foul Crow Nest, with the intent to have the card spawning units, but there is Alien Locust and Forbidden Gate as well as Summoner and Stargazer in that space already. Thus I chose Virulent.",
-        "There is only Miasmatic Goo with Virulent in the game. And only Mindmelter with Panic. Both of these cards are at the 8 gold threshold and rares, so they aren’t appearing frequently. I think there is room for both Virulent and Panic in a very cheap unit and would like to explore that space."
+        "There is only Miasmatic Goo with Virulent in the game. And only Mindmelter with Panic. Both of these cards are at the 8 gold threshold and rares, so they aren’t appearing frequently. I think there is room for both Virulent and Panic in a very cheap unit and would like to explore that space.",
+        "From a flavor point of view, having 1 charge of Panic makes sense. Whoever attacks first gets hit with the Wasp and realizes it was a bad idea, but the next attacker knows already what to expect."
       ),
-      balance: ["I do not consider Virulent and Panic good enough to be present only in high cost units. But even if they were, by making the Nest an Immobile unit it will definitely make these effects considerably weaker. And frankly, Alien Locust is only one more gold and has much much more utility than this card so I actually think the Wasp Nest is going to be good enough."]
+      balance: ["I do not consider Virulent and Panic good enough to only be present in high cost units, thus I suggested this. But even if they were, by making the Nest an Immobile unit these effects will be considerably weaker. And frankly, Alien Locust is only one more gold and has much much more utility than this card so I actually think the Wasp Nest is going to be 'the right amount of strong'."]
     }
   },
   {
@@ -149,9 +155,9 @@ const CARDS = [
     secondaryUnits: [],
     sections: {
       designNotes: L(
+        "I thought about having a Reap: 40% chance of stun to a random unit instead of a Post-Attack. But that looks too easy to abuse.",
         "Unsure whether Solitary is needed, but without it the unit would be too strong for 2 gold.",
-        "I thought about having a Reap: 40% chance of stun to a random unit instead of a Post-Attack. Could go either way.",
-        "It has to be 2 gold, see The Hanging Tree last bullet point."
+        "It has to be 2 gold because of the whole curve from the Faction, see The Hanging Tree last bullet point."
       )
     }
   },
@@ -172,8 +178,9 @@ const CARDS = [
     sections: {
       designNotes: L(
         "Basically the Red version of the Agent Siren and of the durdling capabilities of Alien Locust.",
-        "The Undead Hanged Man just helps to durdle, it has very low health and it last strikes so it will die pretty often before attacking, the idea is to push the capture at least one extra beat, if something is attacked, it gets poisoned so the units moving in will have an easier time challenging the zone. Also, if you deploy this in a Marshland, then everything has Last Strike and a Hanging Tree in a Marshland is a pretty crazy sighting.",
-        "This has to be 3 gold, Red has Ghoul at 2 and Wand of Bones at 3 so the Faction really struggles to get high cost things as there are so many units on the 4~6 range so you end up spending money on them."
+        "The Undead Hanged Man just helps to durdle, it has very low health and it last strikes so it will die pretty often before attacking. The idea is to push the capture at least one extra beat but sometimes an attack from the Hanged will connect which helps the units moving to have an easier time challenging the zone.",
+        "I like the flavor and this has the caveat that if you deploy in a Marshland you get the strange combination of a Hanging Tree in a Marshland: A pretty crazy sighting.",
+        "This has to be 3 gold, Red has Ghoul at 2 and Wand of Bones at 3 so the Faction really struggles to get high cost things as there are so many units on the 4~6 range the player ends up spending the money on them and struggling to save for the good stuff at 7+ gold."
       ),
       anotherAngle: ["Make it so that whenever a unit dies (Reap), the unit will be hanged and stack the Ripening counter, so in that case it should lose the Solitary. I’d not want that though because I think Red needs a non-cluster, ergo Solitary, option that is good (The Mindless becoming Rogue is just not great)."]
     }

@@ -53,7 +53,7 @@ const CARDS = [
     abilities: [{ trigger: "on-capture", name: null, text: "generates a number of Explorer Members (minimum 1) equal to half the captured zone VP rounded down" }],
     secondaryUnits: [{
       id: "explorer-member", name: "Explorer Member", type: ["elf"],
-      stats: { attack: 2, health: 9, armor: null, movement: 2, range: null, annex: 30 },
+      stats: { attack: 1, health: 9, armor: null, movement: 2, range: null, annex: 30 },
       traits: [], mechanics: [], abilities: []
     }],
     sections: {
